@@ -10,7 +10,8 @@ Use-only
 
 1. [Download the CSS files](https://github.com/brenolf/Buttonic/blob/gh-pages/css.zip).
 2. Include following rules into your code (the styles that you want, *you only need Font-Awesome if you are going to use icons*). 
-  	`<link rel="stylesheet" type="text/css" href="css_path/buttonic-plain.css">`
+
+    `<link rel="stylesheet" type="text/css" href="css_path/buttonic-plain.css">`
 	`<link rel="stylesheet" type="text/css" href="css_path/buttonic-push.css">`
 	`<link rel="stylesheet" type="text/css" href="css_path/buttonic-flat.css">`
 	`<link rel="stylesheet" type="text/css" href="css_path/buttonic-badge.css">`
