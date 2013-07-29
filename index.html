@@ -1,0 +1,142 @@
+<html>
+<head>
+	<title>Buttonic</title>
+	<link rel="stylesheet" type="text/css" href="css/buttonic-plain.css">
+	<link rel="stylesheet" type="text/css" href="css/buttonic-push.css">
+	<link rel="stylesheet" type="text/css" href="css/buttonic-flat.css">
+	<link rel="stylesheet" type="text/css" href="css/buttonic-badge.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.png">
+
+	<base target="_blank"/>
+</head>
+<body>
+
+	<header>
+		<a href="https://github.com/brenolf"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+		<h1>Buttonic</h1>
+		<h2>It's time to <span>buttone</span> your buttons with a rich <span>CSS</span> library built with <span>LESS</span></h2>
+	</header>
+
+	<div id="bg">
+		<div class="line"></div>
+
+		<article id="main">
+
+			<h3>Flat buttons</h3>
+			<section>
+				<div id="example-flat">
+					<button class="btnic-flat">Default</button>
+					<button class="btnic-flat btnic-yellow">Yellow</button>
+					<button class="btnic-flat btnic-red">Red</button>
+					<button class="btnic-flat btnic-grey">Grey</button>
+					<button class="btnic-flat btnic-green">Green</button>
+					<button class="btnic-flat btnic-purple">Purple</button>
+					<button class="btnic-flat btnic-orange">Orange</button>
+					<button class="btnic-flat btnic-navy">Navy</button>
+				</div>
+			</section>
+
+			<h3>Plain buttons</h3>
+			<section>
+				<div id="example-plain">
+					<button class="btnic-plain disabled">Disabled</button>
+					<button class="btnic-plain">Enabled</button>
+					<button class="btnic-plain pressed">Pressed</button>
+				</div>
+
+			</section>
+
+			<h3>Push buttons</h3>
+			<section>
+				<div id="example-push">
+					<button class="btnic-push btnic-tiny btnic-yellow">Tiny</button>
+					<button class="btnic-push btnic-small btnic-red">Small</button>
+					<button class="btnic-push btnic-grey">Normal</button>
+					<button class="btnic-push btnic-big btnic-navy">Big</button>
+					<button class="btnic-push btnic-huge btnic-green">Huge</button>
+				</div>
+
+			</section>
+
+			<h3>Badge buttons</h3>
+			<section>
+				<div id="example-badge">
+					<button class="btnic-badge btnic-green disabled"><i class="icon-twitter"></i><br/>Follow me!</button>
+					<button class="btnic-badge btnic-green"><i class="icon-twitter"></i><br/>Follow me!</button>
+					<button class="btnic-badge btnic-green btnic-lit"><i class="icon-twitter"></i><br/>Follow me!</button>
+				</div>
+			</section>
+
+			<p><em>Note that the "icon-twitter" class is from Font-Awesome library.</em></p>
+
+			<h3>Fancy classes</h3>
+			<section>
+				<div id="example-fancy-gradient">
+					<a href="javascript:void(0);" class="btnic-push btnic-big btnic-orange btnic-gradient">Gradient</a>
+				</div>
+
+				<div id="example-fancy-glow">
+					<a href="javascript:void(0);" class="btnic-plain btnic-navy btnic-glow">Glows on mouse over</a>
+				</div>
+			</section>
+
+
+			<div class="left-panel">
+				<h3>Acknowldgements</h3>
+				<section>
+					<ul>
+						<li>Works fine on Google Chrome, Mozilla Firefox, Apple Safari and Opera (on which the library was tested). There is a renderisation problem with huge push button on Opera.</li>
+						<li>The push and badge buttons cannot be set to a different position style. Instead, you can nest them into a DOM and freely style this parent node.</li>
+						<li>If you are wondering how to pronounce "Buttonic" as well as "Buttone", here are the IPA pronunciations: /B&#652;'T&#594;N&#618;K/ and /B&#652;'T&#601;&#650;N/. </li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="right-panel">
+				<h3>Thanks to</h3>
+				<section>
+					<ul>
+						<li>The icons used were provided by <a href="http://fortawesome.github.io/Font-Awesome/">Font-Awesome</a>.</li>
+						<li>Thanks to <a href="https://twitter.com/@Anaas_Siq">@Anaas_Siq</a> and <a href="https://twitter.com/@GeorgeSevernini">@GeorgeSevernini</a> for reviewing and giving tips about the design and the project as a whole.</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="clear"></div>
+
+
+			<h3>Getting ready!</h3>
+			<section>
+				<p>1. First <button class="btnic-plain btnic-small green"><i class="icon-download"></i> Download</button> the css files.</p>
+
+				<p>2. Then add the following rules into your code:</p>
+				<pre class="prettyprint linenums" id="css-rules">
+					&lt;link rel="stylesheet" type="text/css" href="css_path/buttonic-plain.css"&gt;
+					&lt;link rel="stylesheet" type="text/css" href="css_path/buttonic-push.css"&gt;
+					&lt;link rel="stylesheet" type="text/css" href="css_path/buttonic-flat.css"&gt;
+					&lt;link rel="stylesheet" type="text/css" href="css_path/buttonic-badge.css"&gt;
+					&lt;link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" &gt;</pre>
+
+				<p><em>Add just the CSS files that are suitable for you (for instance, add Font-Awesome just if you are going to use icons).</em></p>
+				<p>3. And you are done! Now you can buttone around!</p>
+
+			</section>
+
+		</article>
+	</div>
+
+	<footer>
+		<div class="line"></div>
+
+		<div>Buttonic 0.1 &middot; Created and Maintained by <a href="http://brenolf.com/">Brenolf</a></div>
+		<div>Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a></div>
+	</footer>
+
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+
+</html>

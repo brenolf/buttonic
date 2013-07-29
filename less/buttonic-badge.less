@@ -1,0 +1,148 @@
+@import "_buttonic-util.less";
+
+.btnic-colourGetter(@bg) {
+	.gradient3D();
+	@nbg: rgba(red(@bg), green(@bg), blue(@bg), 0.6);
+	background-color: #ccc;
+	border: none;
+
+	&.btnic-badge::before{
+		background: rgba(125, 125, 125, 0.5);
+	}
+
+	&:focus, &:hover {
+		background-color: #ddd;
+		color: #555 !important;
+
+		&.btnic-badge::before{
+			background: @nbg;
+		}
+	}
+
+	&.pressed, &:active {
+		.gradient(@transparentWhite, @opaqueWhite);
+		padding-top: 2px !important;
+		
+		&.btnic-badge::before{
+			background: @nbg;
+		}
+	}
+
+	&.disabled {
+		&.btnic-badge::before {
+			background: rgba(125, 125, 125, 0.5) !important;
+		}
+
+		&.pressed, &:active {
+			padding-top: 0 !important;
+		}
+
+		color: #999 !important;
+		background: #ccc;
+	}
+
+	&.btnic-lit {
+		&.btnic-badge::before {
+			background: @nbg;
+		}
+	}
+
+	&.btnic-glow:hover {
+		text-shadow: 1px 0 0 #fff, 0 0 5px darken(@nbg, 20%) !important;
+	}
+}
+
+.btnic-badge::before {
+	.transition-linear(background;);
+	content: '';
+	position: absolute;
+	top: -8;
+	left: -8;
+	right: -8;
+	bottom: -8;
+	z-index: -1;
+	.radius(100%);
+}
+
+.btnic-badge {
+	.transition-linear(background, color, text-shadow;);
+	.radius(100%);
+	text-shadow: 1px 0 0 #fff !important;
+	box-shadow: 0 1px 1px #777;
+	color: #777 !important;
+	font-weight: bold;
+	height: 70px;
+	width: 70px;
+	padding: 0 !important;
+	position: relative;
+	margin: 8px;
+	font-size: 15px;
+
+	&:active {
+		outline: none;
+	}
+
+	&.disabled {
+		.transition-duration(0);
+		text-shadow: none;
+	}
+
+	&.btnic-huge {
+		font-size: 36px;
+		height: 180px;
+		width: 180px;
+		margin: 20px;
+
+		&.btnic-badge::before {
+			top: -20;
+			left: -20;
+			right: -20;
+			bottom: -20;	
+		}
+	}
+
+	&.btnic-big {
+		font-size: 20px;
+		height: 110px;
+		width: 110px;
+		margin: 12px;
+
+		&.btnic-badge::before {
+			top: -12;
+			left: -12;
+			right: -12;
+			bottom: -12;	
+		}
+	}
+
+	&.btnic-small {
+		font-size: 11px;
+		height: 57px;
+		width: 57px;
+		margin: 6px;
+
+		&.btnic-badge::before {
+			top: -6;
+			left: -6;
+			right: -6;
+			bottom: -6;	
+		}
+	}
+
+	&.btnic-tiny {
+		font-size: 7px;
+		height: 40px;
+		width: 40px;
+		margin: 5px;
+
+		&.btnic-badge::before {
+			top: -4;
+			left: -4;
+			right: -4;
+			bottom: -4;	
+		}
+	}
+
+	.btnic-colours();
+	.btnic();
+}

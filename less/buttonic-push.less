@@ -1,0 +1,74 @@
+@import "_buttonic-util.less";
+
+.btnic-colourGetter(@bg) {
+	@borderColor: hardlight(@bg, #555);
+	background-color: @bg;
+	border: solid 1px @borderColor;
+	box-shadow: 0 4px 0 @borderColor, 1px 5px 5px #555, inset 0 0 #333;
+	margin-bottom: 4px !important;	
+
+	&.btnic-huge {
+		box-shadow: 0 6px 0 @borderColor, 1px 7px 6px #555, inset 0 0 #333;
+		margin-bottom: 6px !important;	
+	}
+
+	&.btnic-tiny {
+		box-shadow: 0 2px 0 @borderColor, 1px 3px 3px #555, inset 0 0 #333;
+		margin-bottom: 2px !important;	
+	}
+
+	&:focus, &:hover {
+		background-color: hardlight(@bg, #959595);
+	}
+
+	&.pressed, &:active {
+		box-shadow: 0 0 0 @borderColor, 0 0 0 #555, inset 0 1px 5px #444;
+		background-color: hardlight(@bg, #777);
+
+		&.btnic-huge {
+			box-shadow: 0 0 0 @borderColor, 0 0 0 #555, inset 0 2px 7px #444;
+		}
+
+		&.btnic-tiny {
+			box-shadow: 0 0 0 @borderColor, 0 0 0 #555, inset 0 1px 2px #444;
+		}
+	}
+
+	&.disabled {
+		background: hardlight(@bg, #999);
+		border-color: hardlight(@borderColor, #999);
+	}
+}
+
+.btnic-push {
+	position: relative;
+	.transition-linear(box-shadow, background-color, top; 0.1s);
+	font-weight: bold;
+	.radius(5px);
+
+	&:active {
+		top: 4px;
+
+		&.btnic-huge {
+			top: 6px;
+		}
+
+		&.btnic-tiny {
+			top: 2px;
+		}
+	}
+
+	&.disabled {
+		.transition-duration(0);
+		.no-box-shadow();
+		text-shadow: none;
+
+		&:active {
+			top: 0;
+		}
+	}
+
+	.btnic-sizer() !important;
+	.btnic-colours();
+	.btnic();
+}
