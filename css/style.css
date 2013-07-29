@@ -1,0 +1,151 @@
+@font-face {
+	font-family: 'Pacifico';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Pacifico Regular'), local('Pacifico-Regular'), url('../fonts/Pacifico.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Patrick Hand SC';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Patrick Hand SC'), local('PatrickHandSC-Regular'), url('../fonts/Patrick.woff') format('woff');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url('../img/noise.gif');
+	background-attachment: fixed;
+	font-family: 'Patrick Hand SC', sans-serif;
+	color: #555;
+	margin-top: 300px;
+}
+
+div[id^="example"] {
+	text-align: center;
+}
+
+p, ul {
+	font-size: 20px;
+}
+
+ul {
+	list-style: square;
+	list-style-position: inside;
+}
+
+header {
+	text-align: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+#bg {
+	background-image: url('../img/noise.gif');
+	position: relative;
+	z-index: 10;
+	box-shadow: -2px 0 7px #888;
+	-moz-box-shadow: -2px 0 7px #888;
+	-webkit-box-shadow: -2px 0 7px #888;
+	padding-bottom: 22px;
+}
+
+#bg > .line {
+	height: 1px;
+	background: #999;
+	border-bottom: solid 1px #eee;
+	width: 100%;
+	display: inline-block;
+}
+
+#main {
+	width: 920px;
+	margin: 0 auto;	
+}
+
+a {
+	color: #333;
+}
+
+pre {
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	box-shadow: 0 1px 0 #fff;
+	-moz-box-shadow: 0 1px 0 #fff;
+	-webkit-box-shadow: 0 1px 0 #fff;
+}
+
+h1 {
+	font-family: 'Pacifico', sans-serif;
+	color: #10B37F;
+	text-shadow: 0 2px 0 #eee;
+	font-size: 128px;
+	margin-bottom: -35px;
+}
+
+h2 span {
+	color: #333;
+}
+
+h2 {
+	font-size: 30px;
+	text-shadow: 0 1px 0 #fff;
+}
+
+h3, h4 {
+	font-size: 25px;
+	color: #333;
+	margin: 20px 0;
+	text-shadow: 0 1px 0 #fff;
+	font-weight: bold;
+	line-height: 50px;
+	border-bottom: dotted 1px #444;
+}
+
+.left-panel {
+	width: 48%;
+	margin-right: 4%;
+	float: left;
+}
+
+.right-panel {
+	width: 48%;
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+footer > .line {
+	height: 1px;
+	background: #333;
+	border-bottom: solid 1px #777;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+footer {
+	position: relative;
+	z-index: 20;
+	margin-top: -2px;
+	color: #fff;
+	background: #333;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+footer a {
+	color: #fff;
+}

@@ -1,0 +1,49 @@
+@import "_buttonic-util.less";
+
+.box-shadow-plain(@blur: 0; @colour: #77C6DD) {
+	box-shadow: inset 0 1px @blur @colour;
+	-moz-box-shadow: inset 0 1px @blur @colour;
+	-webkit-box-shadow: inset 0 1px @blur @colour;
+}
+
+.btnic-colourGetter(@bg) {
+	@borderColor: hardlight(@bg, #555);
+	background-color: @bg;
+	border: solid 1px @borderColor;
+	.box-shadow-plain(0; hardlight(@bg, #bbb));
+
+	&:focus, &:hover {
+		background-color: hardlight(@bg, #959595);
+	}
+
+	&.pressed, &:active {
+		.box-shadow-plain(2px; hardlight(@bg, #606060));
+		background-color: hardlight(@bg, #777);
+	}
+
+	&.disabled {
+		background: hardlight(@bg, #999);
+		border-color: hardlight(@borderColor, #999);
+	}
+}
+
+.btnic-plain {
+	.transition-linear(box-shadow, background-color;);
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	&:active {
+		outline: none;
+		.transition-duration(0.05s);
+	}
+
+	&.disabled {
+		.transition-duration(0);
+		.no-box-shadow();
+		text-shadow: none;
+	}
+
+	.btnic-sizer() !important;
+	.btnic-colours();
+	.btnic();
+}
