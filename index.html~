@@ -109,7 +109,7 @@
 
 			<h3>Getting ready!</h3>
 			<section>
-				<p>1. First <a class="btnic-plain btnic-small btnic-green" href="http://brenolf.github.io/Buttonic/css.zip"><i class="icon-download"></i> Download</a> the css files.</p>
+				<p>1. First <a class="btnic-plain btnic-small green" href="http://brenolf.github.io/Buttonic/css.zip"><i class="icon-download"></i> Download</a> the css files.</p>
 
 				<p>2. Then add the following rules into your code:</p>
 				<pre class="prettyprint linenums" id="css-rules">
