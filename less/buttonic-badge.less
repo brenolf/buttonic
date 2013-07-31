@@ -1,5 +1,39 @@
 @import "_buttonic-util.less";
 
+.btnic-badge-sizer(@font-size; @w; @h; @margin; @before) {
+	font-size: @font-size;
+	height: @h;
+	width: @w;
+	margin: @margin;
+
+	&.btnic-badge::before {
+		top: @before;
+		left: @before;
+		right: @before;
+		bottom: @before;	
+	}
+}
+
+.btnic-badge-sizer-getter(@padding: 0px) {
+	&.btnic-huge {
+		.btnic-badge-sizer(36px; 180px; (180px - @padding); 20px; -20px);
+	}
+
+	&.btnic-big {
+		.btnic-badge-sizer(20px; 110px; (110px - @padding); 12px; -12px);
+	}
+
+	&.btnic-small {
+		.btnic-badge-sizer(11px; 57px; (57px - @padding); 6px; -6px);
+	}
+
+	&.btnic-tiny {
+		.btnic-badge-sizer(7px; 40px; (40px - @padding); 5px; -4px);
+	}
+
+	.btnic-badge-sizer(14px; 70px; (70px - @padding); 8px; -8px);
+}
+
 .btnic-colourGetter(@bg) {
 	.gradient3D();
 	@nbg: rgba(red(@bg), green(@bg), blue(@bg), 0.6);
@@ -23,6 +57,8 @@
 		.gradient(@transparentWhite, @opaqueWhite);
 		padding-top: 2px !important;
 		
+		.btnic-badge-sizer-getter(2px);
+
 		&.btnic-badge::before{
 			background: @nbg;
 		}
@@ -56,10 +92,6 @@
 	.transition-linear(background;);
 	content: '';
 	position: absolute;
-	top: -8;
-	left: -8;
-	right: -8;
-	bottom: -8;
 	z-index: -1;
 	.radius(100%);
 }
@@ -67,16 +99,12 @@
 .btnic-badge {
 	.transition-linear(background, color, text-shadow;);
 	.radius(100%);
+	.box-shadow(0; 1px; 1px; #777);
 	text-shadow: 1px 0 0 #fff !important;
-	box-shadow: 0 1px 1px #777;
 	color: #777 !important;
 	font-weight: bold;
-	height: 70px;
-	width: 70px;
 	padding: 0 !important;
 	position: relative;
-	margin: 8px;
-	font-size: 14px;
 
 	&:active {
 		outline: none;
@@ -87,62 +115,7 @@
 		text-shadow: none;
 	}
 
-	&.btnic-huge {
-		font-size: 36px;
-		height: 180px;
-		width: 180px;
-		margin: 20px;
-
-		&.btnic-badge::before {
-			top: -20;
-			left: -20;
-			right: -20;
-			bottom: -20;	
-		}
-	}
-
-	&.btnic-big {
-		font-size: 20px;
-		height: 110px;
-		width: 110px;
-		margin: 12px;
-
-		&.btnic-badge::before {
-			top: -12;
-			left: -12;
-			right: -12;
-			bottom: -12;	
-		}
-	}
-
-	&.btnic-small {
-		font-size: 11px;
-		height: 57px;
-		width: 57px;
-		margin: 6px;
-
-		&.btnic-badge::before {
-			top: -6;
-			left: -6;
-			right: -6;
-			bottom: -6;	
-		}
-	}
-
-	&.btnic-tiny {
-		font-size: 7px;
-		height: 40px;
-		width: 40px;
-		margin: 5px;
-
-		&.btnic-badge::before {
-			top: -4;
-			left: -4;
-			right: -4;
-			bottom: -4;	
-		}
-	}
-
+	.btnic-badge-sizer-getter();
 	.btnic-colours();
 	.btnic();
 }

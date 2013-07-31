@@ -69,6 +69,12 @@
 	-webkit-box-shadow: none;
 }
 
+.box-shadow(@left: 0; @right: 0; @blur: 0; @colour: #000) {
+	box-shadow: @left @right @blur @colour;
+	-moz-box-shadow: @left @right @blur @colour;
+	-webkit-box-shadow: @left @right @blur @colour;
+}
+
 .transition-linear(@props: all; @time: 0.3s) {
 	transition: all @time linear;
 	transition-property: @props;
