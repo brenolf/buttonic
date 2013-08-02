@@ -16,7 +16,7 @@ Use-only
 	`<link rel="stylesheet" type="text/css" href="css_path/buttonic-flat.css">`
 	`<link rel="stylesheet" type="text/css" href="css_path/buttonic-badge.css">`
     	`<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">`
-3. Buttone around!.
+3. Buttone around!
 
 Customise Buttons
 =================
