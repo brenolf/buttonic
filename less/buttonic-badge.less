@@ -1,37 +1,49 @@
 @import "_buttonic-util.less";
 
-.btnic-badge-sizer(@font-size; @w; @h; @margin; @before) {
+.btnic-badge-sizer(@font-size; @bounds; @margin) {
+	@pos: (@bounds - (@font-size / 2));
 	font-size: @font-size;
-	height: @h;
-	width: @w;
+	height: @bounds;
+	width: @bounds;
 	margin: @margin;
+	line-height: @pos;
 
 	&.btnic-badge::before {
-		top: @before;
-		left: @before;
-		right: @before;
-		bottom: @before;	
+		top: -@margin;
+		left: -@margin;
+		right: -@margin;
+		bottom: -@margin;	
+	}
+
+	&.pressed, &:active {
+		padding-top: 13px;
+	}
+
+	&.disabled {
+		&.pressed, &:active {
+			padding-top: 10px !important;
+		}
 	}
 }
 
-.btnic-badge-sizer-getter(@padding: 0px) {
+.btnic-badge-sizer-getter() {
 	&.btnic-huge {
-		.btnic-badge-sizer(36px; 180px; (180px - @padding); 20px; -20px);
+		.btnic-badge-sizer(36px; 180px; 20px);
 	}
 
 	&.btnic-big {
-		.btnic-badge-sizer(20px; 110px; (110px - @padding); 12px; -12px);
+		.btnic-badge-sizer(20px; 110px; 12px);
 	}
 
 	&.btnic-small {
-		.btnic-badge-sizer(11px; 57px; (57px - @padding); 6px; -6px);
+		.btnic-badge-sizer(11px; 57px; 6px);
 	}
 
 	&.btnic-tiny {
-		.btnic-badge-sizer(7px; 40px; (40px - @padding); 5px; -4px);
+		.btnic-badge-sizer(7px; 40px; 5px);
 	}
 
-	.btnic-badge-sizer(14px; 70px; (70px - @padding); 8px; -8px);
+	.btnic-badge-sizer(14px; 70px; 8px);
 }
 
 .btnic-colourGetter(@bg) {
@@ -55,9 +67,6 @@
 
 	&.pressed, &:active {
 		.gradient(@transparentWhite, @opaqueWhite);
-		padding-top: 2px !important;
-		
-		.btnic-badge-sizer-getter(2px);
 
 		&.btnic-badge::before{
 			background: @nbg;
@@ -65,16 +74,12 @@
 	}
 
 	&.disabled {
+		color: #999 !important;
+		background: #ccc;
+
 		&.btnic-badge::before {
 			background: rgba(125, 125, 125, 0.5) !important;
 		}
-
-		&.pressed, &:active {
-			padding-top: 0 !important;
-		}
-
-		color: #999 !important;
-		background: #ccc;
 	}
 
 	&.btnic-lit {
@@ -103,8 +108,8 @@
 	text-shadow: 1px 0 0 #fff !important;
 	color: #777 !important;
 	font-weight: bold;
-	padding: 0 !important;
 	position: relative;
+	box-sizing: border-box;
 
 	&:active {
 		outline: none;
@@ -115,7 +120,7 @@
 		text-shadow: none;
 	}
 
-	.btnic-badge-sizer-getter();
 	.btnic-colours();
 	.btnic();
+	.btnic-badge-sizer-getter();
 }

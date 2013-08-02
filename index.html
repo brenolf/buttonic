@@ -63,13 +63,13 @@
 			<h3>Badge buttons</h3>
 			<section>
 				<div id="example-badge">
-					<button class="btnic-badge btnic-green disabled"><i class="icon-twitter"></i><br/>Follow me!</button>
-					<button class="btnic-badge btnic-green"><i class="icon-twitter"></i><br/>Follow me!</button>
-					<button class="btnic-badge btnic-green btnic-lit"><i class="icon-twitter"></i><br/>Follow me!</button>
+					<button class="btnic-badge btnic-green disabled"><i class="icon-thumbs-up-alt icon-3x"></i></button>
+					<button class="btnic-badge"><i class="icon-twitter icon-3x"></i></button>
+					<button class="btnic-badge btnic-orange btnic-lit"><i class="icon-css3 icon-3x"></i></button>
 				</div>
 			</section>
 
-			<p><em>Note that the "icon-twitter" class is from Font-Awesome library.</em></p>
+			<p><em>Note that the "icon-" classes are from Font-Awesome library.</em></p>
 
 			<h3>Fancy classes</h3>
 			<section>
@@ -78,8 +78,11 @@
 				</div>
 
 				<div id="example-fancy-glow">
-					<!--<a href="javascript:void(0);" class="btnic-plain btnic-navy btnic-glow">Glows on mouse over</a>-->
-					<a href="javascript:void(0);" class="btnic-badge">Glows on mouse over</a>
+					<a href="javascript:void(0);" class="btnic-plain btnic-navy btnic-glow">Glows on mouse over</a>
+				</div>
+
+				<div id="example-block">
+					<a href="javascript:void(0);" class="btnic-flat btnic-block btnic-green">A block button</a>
 				</div>
 			</section>
 
@@ -90,6 +93,7 @@
 					<ul>
 						<li>Works fine on Google Chrome, Mozilla Firefox, Apple Safari and Opera (on which the library was tested). There is a renderisation problem with huge push button on Opera.</li>
 						<li>The push and badge buttons cannot be set to a different position style. Instead, you can nest them into a DOM and freely style this parent node.</li>
+						<li>The badge button cannot have more than one line of text, otherwise it will overflow awfully.</li>
 						<li>If you are wondering how to pronounce "Buttonic" as well as "Buttone", here are the IPA pronunciations: /B&#652;'T&#594;N&#618;K/ and /B&#652;'T&#601;&#650;N/. </li>
 					</ul>
 				</section>
