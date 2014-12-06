@@ -1,14 +1,14 @@
 Buttonic
 ========
 
-Buttonic is a rich CSS button library built with LESS, created by [Brenolf](http://brenolf.com) that can be easily modified.
+Buttonic is a rich CSS button library built with LESS, created by [Brenolf](http://breno.io) that can be easily modified.
 
-Watch out the [live exaples here](http://brenolf.github.io/Buttonic/)!
+Watch out the [live exaples here](http://breno.io/buttonic/)!
 
 Use-only
 ========
 
-1. [Download the CSS files](http://brenolf.github.io/Buttonic/css.zip).
+1. [Download the CSS files](http://breno.io/buttonic/css.zip).
 2. Include following rules into your code (the styles that you want, *you only need Font-Awesome if you are going to use icons*). 
 
  `<link rel="stylesheet" type="text/css" href="css_path/buttonic-plain.css">`
