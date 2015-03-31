@@ -1,4 +1,4 @@
-@import "_buttonic-util.less";
+@import "assets/buttonic-util.less";
 
 .btnic-badge-sizer(@font-size; @bounds; @margin) {
 	@pos: (@bounds - (@font-size / 2));
@@ -94,17 +94,17 @@
 }
 
 .btnic-badge::before {
-	.transition-linear(background;);
+	transition: all 0.3s linear;
 	content: '';
 	position: absolute;
 	z-index: -1;
-	.radius(100%);
+	border-radius: 100%;
 }
 
 .btnic-badge {
-	.transition-linear(background, color, text-shadow;);
-	.radius(100%);
-	.box-shadow(0; 1px; 1px; #777);
+	transition: all 0.1s linear;
+	border-radius: 100%;
+	box-shadow: 0 1px 1px #777;
 	text-shadow: 1px 0 0 #fff !important;
 	color: #777 !important;
 	font-weight: bold;
@@ -116,7 +116,7 @@
 	}
 
 	&.disabled {
-		.transition-duration(0);
+		transition-duration: 0;
 		text-shadow: none;
 	}
 

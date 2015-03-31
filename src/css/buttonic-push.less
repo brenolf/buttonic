@@ -1,4 +1,4 @@
-@import "_buttonic-util.less";
+@import "assets/buttonic-util.less";
 
 .btnic-colourGetter(@bg) {
 	@borderColor: hardlight(@bg, #555);
@@ -42,9 +42,10 @@
 
 .btnic-push {
 	position: relative;
-	.transition-linear(box-shadow, background-color, top; 0.1s);
+	transition: all 0.1s linear;
 	font-weight: bold;
-	.radius(5px);
+	border-radius: 5px;
+	top: 0;
 
 	&:active {
 		top: 4px;
@@ -59,8 +60,8 @@
 	}
 
 	&.disabled {
-		.transition-duration(0);
-		.no-box-shadow();
+		transition-duration: 0;
+		box-shadow: none;
 		text-shadow: none;
 
 		&:active {

@@ -1,4 +1,4 @@
-@import "_buttonic-util.less";
+@import "assets/buttonic-util.less";
 
 .btnic-colourGetter(@bg) {
 	background-color: @bg;
@@ -18,8 +18,8 @@
 }
 
 .btnic-flat {
-	.transition-linear(background-color, color;);
-	.radius(100px);
+	transition: all 0.3s linear;
+	border-radius: 100px;
 	text-shadow: none !important;
 
 	&.btnic-glow:hover {
@@ -29,11 +29,11 @@
 	&:active {
 		color: rgba(255, 255, 255, 0.8);
 		outline: none;
-		.transition-duration(0.05s);
+		transition-duration: 0.05s;
 	}
 
 	&.disabled {
-		.transition-duration(0);
+		transition-duration: 0;
 		text-shadow: none;
 		color: #fff;
 	}
